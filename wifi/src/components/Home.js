@@ -124,24 +124,30 @@ const Home = () => {
             className="text-xl text-white-400 font-mono px-6 py-4"
           ></div>
         </div>
-        {/* Call to Action */}
-        <div className="w-full max-w-4xl rounded-lg p-8 shadow-md">
-          <h2 className="text-center text-3xl font-bold mb-4">
-            Join Our Movement
-          </h2>
-          <p className="text-center text-lg mb-6">
-            Together, we can create a world where women feel supported, valued,
-            and empowered to achieve their dreams.
-          </p>
-          <div className="flex justify-center">
-            <button
-              onClick={() => setIsPopupVisible(true)}
-              className="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-pink-900 transition"
-            >
-              Donate
-            </button>
-          </div>
-        </div>
+{/* Call to Action */}
+<div className="w-full max-w-4xl rounded-lg p-8 shadow-md">
+  <h2 className="text-center text-3xl font-bold mb-4">
+    Join Our Movement
+  </h2>
+  <p className="text-center text-lg mb-6">
+    Together, we can create a world where women feel supported, valued,
+    and empowered to achieve their dreams.
+  </p>
+  <div className="flex justify-center gap-4"> {/* Added gap-4 for spacing between buttons */}
+    <button
+      onClick={() => setIsPopupVisible(true)}
+      className="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-pink-900 transition"
+    >
+      Donate
+    </button>
+    <button
+      onClick={() => alert("Volunteer action triggered!")}
+      className="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-pink-900 transition"
+    >
+      Volunteer
+    </button>
+  </div>
+</div>
 
         {/* Popup */}
         {isPopupVisible && (
